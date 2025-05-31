@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="kh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icon.jpg">
+    <title>Professional Training - University of Cambodia</title>
+    <style>
+         @font-face {
+  font-family: 'Khmer OS';
+  src: url('fonts/KhmerOS.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+	
+	body {
+      font-family: 'Khmer OS', Arial, sans-serif;
+
+      padding: 0;
+    }
+
+	.khmer-text {
+  font-family: 'Khmer OS', Arial, sans-serif;
+}
+        
+        .banner {
+            width: 100%;
+            height: auto;
+        }
+        
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .navbar {
+            background-color: #0968c7;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 16px;
+            display: inline-block;
+            transition: all 0.1s ease;
+            transform: scale(1);
+        }
+
+        .navbar a:hover {
+            background-color: #004c99;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+       .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 260px;
+  max-width: 95vw;
+  left: 50%;
+  transform: translateX(-50%); /* Center it */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 8px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .dropdown-content {
+    max-width: 90vw;
+  }
+}
+.dropdown-content a {
+  display: block;
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-family: 'Khmer OS Siemreap', Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dropdown-content a span {
+  font-style: italic;
+}
+
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #004c99;
+        }
+        
+        .content {
+            padding: 20px;
+            max-width: 1328px;
+            margin: 0 auto;
+        }
+        
+        .responsive-table-container {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+        
+        .training-table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        .training-table td, .training-table th {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        
+        .training-table th {
+            background-color: #D9D9D9;
+            text-align: center;
+        }
+        
+        .training-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .training-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .section-header {
+            background-color: #f1f1f1;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        h1 {
+            color: #003366;
+            text-align: center;
+        }
+        
+        .news-item {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border: 3px solid blue;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .training-table {
+                font-size: 12px;
+            }
+            
+            .training-table td, .training-table th {
+                padding: 6px 8px;
+            }
+            
+            .section-header {
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .training-table {
+                font-size: 11px;
+            }
+            
+            .navbar a {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+    <div>
+<marquee behavior="slide" direction="left" scrollamount="8">
+<img src="img/banner.jpg" alt="Image" style="width:100%;">
+</marquee>
+</div>
+</head>
+<body>
+    <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="news.html"target="_blank">News</a>
+    <a href="member.html"target="_blank">Faculty Members</a>
+    <a href="professional training.html"target="_blank">Professional Training</a>
+    <a href="video.html"target="_blank">Videos CoST</a>
+    <div class="dropdown">
+      <a class="dropbtn">CoST Bachelor Programs</a>
+      <div class="dropdown-content">
+        <a href="IT.html"target="_blank">Information Technology <span style="color:blue;">Since 2003</span></a>
+        <a href="CS.html"target="_blank">Computer Science <span style="color:blue;">Since 2003</span></a>
+        <a href="EC.html"target="_blank">Electronics and Telecommunications <span style="color:blue;">Since 2003</span></a>
+        <a href="GDM.html"target="_blank" >Graphic Design And Multimedia <span style="color:red;">New 2026</span></a>
+        <a href="BMIT.html"target="_blank">Business Management Information Technology <span style="color:red;">New 2026</span></a>
+        <a href="NEC.html"target="_blank">Network Engineering and Cyber Security <span style="color:red;">New 2026</span></a>
+        <a href="DSandAL.html"target="_blank">Data Science and Artificial Intelligence <span style="color:red;">New 2026</span></a>
+      </div>
+    </div>
+	    <div class="dropdown">
+        <a>Computer Labs</a>
+	    <div class="dropdown-content">
+	    <a href="MLab1.html">Multimedia Lab</a>
+        <a href="ELab2.html">E-learning Lab</a>
+        <a href="NLab3.html">Networking Lab</a>
+        <a href="ITLab4.html">IT Center Lab</a>
+      </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        
+        <div class="news-item">
+            <div style="text-align: center;">
+                <img width="298" height="98" src="training_files/image001.jpg" alt="Certificate Programs">
+            </div>
+            
+            <h2 style="text-align: center; color: #006600;">Certificate Programs Training</h2>
+            
+            <div class="responsive-table-container">
+                <table class="training-table">
+                 
+                    <tr class="section-header">
+                        <td colspan="4">Office Application (40h)</td>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Course</th>
+                        <th>Hours</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Microsoft Windows 10 & Internet</td>
+                        <td>5h</td>
+                        <td>20$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Microsoft Word</td>
+                        <td>10h</td>
+                        <td>35$</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Microsoft Excel</td>
+                        <td>15h</td>
+                        <td>40$</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Microsoft Power Point</td>
+                        <td>5h</td>
+                        <td>15$</td>
+                    </tr>
+                    
+                   
+                    <tr class="section-header">
+                        <td colspan="4">Computer Repairing (40h)</td>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Course</th>
+                        <th>Hours</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Upgrading & Maintenance</td>
+                        <td>20h</td>
+                        <td>50$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Hardware Repairing</td>
+                        <td>20h</td>
+                        <td>60$</td>
+                    </tr>
+                    
+                   
+                    <tr class="section-header">
+                        <td colspan="4">Graphic Design (60h)</td>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Course</th>
+                        <th>Hours</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Photoshop</td>
+                        <td>20h</td>
+                        <td>50$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Corel Draw</td>
+                        <td>20h</td>
+                        <td>60$</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Video Editor</td>
+                        <td>20h</td>
+                        <td>80$</td>
+                    </tr>
+                    
+                   
+                    <tr class="section-header">
+                        <td colspan="4">Computer Networking (70h)</td>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Course</th>
+                        <th>Hours</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Basic Cisco networking</td>
+                        <td>30h</td>
+                        <td>60$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Windows server</td>
+                        <td>20h</td>
+                        <td>50$</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Linux</td>
+                        <td>20h</td>
+                        <td>60$</td>
+                    </tr>
+                    
+                  
+                    <tr class="section-header">
+                        <td colspan="4">Web Professional (100h)</td>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Course</th>
+                        <th>Hours</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>HTML & CSS</td>
+                        <td>20h</td>
+                        <td>50$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Java Script</td>
+                        <td>20h</td>
+                        <td>55$</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>PHP & MySQL</td>
+                        <td>30h</td>
+                        <td>65$</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ASP.NET</td>
+                        <td>30h</td>
+                        <td>65$</td>
+                    </tr>
+                    
+                  
+                    <tr class="section-header">
+                        <td colspan="4">CMS Web Deployment (45h)</td>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Course</th>
+                        <th>Hours</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Wordpress Framework</td>
+                        <td>23h</td>
+                        <td>65$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Laravel Framework</td>
+                        <td>22h</td>
+                        <td>70$</td>
+                    </tr>
+                    
+                    
+                    <tr class="section-header">
+                        <td colspan="4">Database Professional (50h)</td>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Course</th>
+                        <th>Hours</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Microsoft Access</td>
+                        <td>20h</td>
+                        <td>50$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>SQL Server</td>
+                        <td>25h</td>
+                        <td>60$</td>
+                    </tr>
+                    
+                  
+                    <tr class="section-header">
+                        <td colspan="4">Mobile App Development (90h)</td>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Course</th>
+                        <th>Hours</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Flutter and Dart</td>
+                        <td>45h</td>
+                        <td>260$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>ReactJS</td>
+                        <td>45h</td>
+                        <td>270$</td>
+                    </tr>
+                    
+                    <!-- Social Media -->
+                    <tr class="section-header">
+                        <td colspan="4">Social Media (35h)</td>
+                    </tr>
+                    <tr>
+                        <th>No</th>
+                        <th>Course</th>
+                        <th>Hours</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Earn Money Google AdSense</td>
+                        <td>20h</td>
+                        <td>70$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Earn Money Facebook Ads break</td>
+                        <td>15h</td>
+                        <td>60$</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <img src="img/uc.png" width="50" height="50" alt="UC Logo">
+        <p style="text-align: center;">Copyright © University of Cambodia</p>
+    </div>
+</body>
+</html>
